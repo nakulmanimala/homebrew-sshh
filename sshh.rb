@@ -5,21 +5,21 @@
 class Sshh < Formula
   desc "TUI for managing SSH servers and tunnels"
   homepage "https://github.com/nakulmanimala/sshh"
-  version "1.3"
+  version "1.4"
   license "MIT"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/nakulmanimala/sshh/releases/download/v1.3/sshh_Darwin_x86_64.tar.gz"
-      sha256 "93bca41bef773554d221f4b7e5465955d295b3bf2975247218c34f7b72b8311f"
+      url "https://github.com/nakulmanimala/sshh/releases/download/v1.4/sshh_Darwin_x86_64.tar.gz"
+      sha256 "9f9d7ad1c4a80531644ae629d4ae6dae097a6b372f4c512cf35bca4973db0a06"
 
       define_method(:install) do
         bin.install "sshh"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/nakulmanimala/sshh/releases/download/v1.3/sshh_Darwin_arm64.tar.gz"
-      sha256 "a51c7bd5898644c6b84e88d400cf827259375db717ccc396f1603c4a039ea4a4"
+      url "https://github.com/nakulmanimala/sshh/releases/download/v1.4/sshh_Darwin_arm64.tar.gz"
+      sha256 "ca1c43b54b2dc445853217b7aa5641ff946e764583f69474c02082f3d373bc58"
 
       define_method(:install) do
         bin.install "sshh"
@@ -29,15 +29,15 @@ class Sshh < Formula
 
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
-      url "https://github.com/nakulmanimala/sshh/releases/download/v1.3/sshh_Linux_x86_64.tar.gz"
-      sha256 "06488ad1bcc99063bdf47a9bf0dfdae72d53991cf2d0b23660fcc9d75ac16c5c"
+      url "https://github.com/nakulmanimala/sshh/releases/download/v1.4/sshh_Linux_x86_64.tar.gz"
+      sha256 "b51c7833308818fb27572439e61b3699fb9c7062449830aee0ee1d0373ca6d6b"
       define_method(:install) do
         bin.install "sshh"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/nakulmanimala/sshh/releases/download/v1.3/sshh_Linux_arm64.tar.gz"
-      sha256 "90446b6e490d2dc2510dab12d1b10bd72ca6d2f915a5805d250985ed55efc287"
+      url "https://github.com/nakulmanimala/sshh/releases/download/v1.4/sshh_Linux_arm64.tar.gz"
+      sha256 "49e7ada8d48bd4d3218b525684a06c359e1072680c85b99f7473c6a85fd93512"
       define_method(:install) do
         bin.install "sshh"
       end
